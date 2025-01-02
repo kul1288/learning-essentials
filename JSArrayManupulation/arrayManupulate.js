@@ -22,3 +22,10 @@ expertData1 = expertData1.map((elem) => (
 ));
 console.log('expertData', expertData);
 //[{catname:  { categories: [1, 2, 3, 4], name: "aaaa"},uuidpass: { password: 12112, uuid: "dfdf" }},  {  catname:  {categories: [1, 2, 3, 4, 5],name: "akkwewe"},uuidpass: {password: 121123,uuid: "sdfdf"}}]
+
+// sort array with reduce 
+let arr = [1, 4, 6, 2, 3, 8, 5]
+let sortArr = arr.reduce((acc, cur) => {
+    return [...acc.filter((ele) => { return ele < cur }), cur, ...acc.filter((ele) => { return ele > cur })]
+}, [])
+console.log(sortArr)
